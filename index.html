@@ -1,892 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Standard — Safer Music Industry</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Helvetica+Neue:wght@100;200;300;400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black: #080808;
-    --white: #F4F0EB;
-    --accent: #BFFF00;
-    --accent-light: #CCFF00;
-    --grey: #1A1A1A;
-    --mid: #2A2A2A;
-    --muted: #666;
-    --border: #222;
-  }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+THE STANDARD
+	•	ABOUT
+	•	SERVICES
+	•	RESOURCES
+	•	CONTACT
 
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    overflow-x: hidden;
-    cursor: none;
-  }
 
-  /* Custom cursor */
-  .cursor {
-    position: fixed;
-    width: 8px; height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, width 0.2s ease, height 0.2s ease;
-  }
-  .cursor-ring {
-    position: fixed;
-    width: 32px; height: 32px;
-    border: 1px solid rgba(200,164,90,0.4);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
-  }
+SETTING THE STANDARD FOR SAFETY IN MUSIC
+The Standard
+Specialist safeguarding, anti-sexual assault and women's safety training for the music and events industry. Because everyone deserves to work and perform in a safe space.
+BOOK TRAINING
+FIND SUPPORT
+1 in 5
+FESTIVAL ATTENDEES EXPERIENCE
+HARASSMENT OR ASSAULT
+◆ ZERO TOLERANCE
+◆ TRAUMA-INFORMED TRAINING
+◆ INDUSTRY SPECIALISTS
+◆ SAFEGUARDING
+◆ ARTIST SAFETY
+◆ VENUE TRAINING
+◆ SET THE STANDARD
+◆ ZERO TOLERANCE
+◆ TRAUMA-INFORMED TRAINING
+◆ INDUSTRY SPECIALISTS
+◆ SAFEGUARDING
+◆ ARTIST SAFETY
+◆ VENUE TRAINING
+◆ SET THE STANDARD
+1 in 5
+FESTIVALGOERS EXPERIENCE HARASSMENT OR ASSAULT IN THE UK
+2%
+OF THOSE AFFECTED EVER REPORT IT TO THE POLICE
+43%
+OF WOMEN UNDER 40 HAVE EXPERIENCED ASSAULT AT EVENTS
+0
+TOLERANCE FOR HARASSMENT, ASSAULT OR ABUSE IN OUR INDUSTRY
+ABOUT
+Built from inside the industry.
+The Standard was founded by Frances — a music industry consultant, artist manager and specialist trainer who has spent years working at the intersection of music, safety and advocacy.
+This isn't generic corporate training. This is specialist knowledge, industry experience and personal commitment to making music a safer space for everyone in it.
+AFEM Code of Conduct
+CONTRIBUTOR
+DJ Rebekah MeToo Campaign
+COLLABORATOR
+Night Department
+ARTIST MANAGER
+Teletech
+CLIENT
+CIISA
+INDUSTRY AUTHORITY
+Help Musicians
+BUSINESS ADVISOR
+SERVICES
+01
+Safeguarding Training
+Specialist safeguarding training tailored for music and events environments. Covers recognition, response, escalation and documentation. Delivered online or in person.
+02
+Anti-Sexual Assault
+Comprehensive training covering consent, red flag behaviours, power dynamics, trauma-informed response and incident management. Built for real industry scenarios.
+03
+Women's Safety
+Focused on the specific risks facing women in music and events — from dancefloor to backstage. Practical frameworks, cultural accountability and zero tolerance policy development.
+04
+Artist Standards
+Bespoke safety standards documentation for artists, management and touring teams. Set expectations clearly and create a safer environment on tour, at festivals and in the studio.
+05
+Keynotes & Conferences
+Speaking engagements, panels and workshops at industry conferences including ADE, IMS and The Great Escape. Bringing the conversation to where the industry gathers.
+06
+Consultancy & Advisory
+Strategic safeguarding consultancy for labels, venues, festivals and booking agencies. Policy development, cultural audits and ongoing advisory support.
+SUPPORT & RESOURCES
+If you or someone you know needs support, these organisations are here to help. You are not alone and what happened to you is not your fault.
+Rape Crisis England & Wales
+0808 500 2222 — FREE, 24/7
+→
+Victim Support
+08 08 16 89 111 — FREE, 24/7
+→
+Galop
+0800 999 5428 — LGBT+ SPECIFIC
+→
+ManKind Initiative
+01823 334244 — MALE SURVIVORS
+→
+CIISA
+CREATIVE INDUSTRIES INDEPENDENT STANDARDS AUTHORITY
+→
+Safe Gigs for Women
+INDUSTRY SAFETY RESOURCES
+→
+CONTACT
+Let's set the standard together.
+Whether you're looking to book training for your organisation, explore a consultancy relationship, or simply have a conversation about how to make your events safer — get in touch.
+EMAIL
+francesbshillito@gmail.com
+INSTAGRAM
+@thestandardmusic
 
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 48px;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s, background 0.3s;
-  }
-  nav.scrolled {
-    background: rgba(8,8,8,0.95);
-    border-color: var(--border);
-    backdrop-filter: blur(8px);
-  }
-  .nav-logo {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: var(--accent);
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .nav-links {
-    display: flex; gap: 40px; list-style: none;
-  }
-  .nav-links a {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent); }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 48px 80px;
-    position: relative;
-    overflow: hidden;
-  }
 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: 
-      radial-gradient(ellipse 60% 50% at 80% 20%, rgba(200,164,90,0.04) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 60% at 10% 80%, rgba(200,164,90,0.03) 0%, transparent 50%);
-  }
+            What are you looking for?
+            Training session
+            Consultancy
+            Speaking / keynote
+            Artist safety standards
+            General enquiry
+          
 
-  .hero-rule {
-    width: 1px;
-    height: 120px;
-    background: linear-gradient(to bottom, transparent, var(--accent));
-    margin-bottom: 48px;
-    opacity: 0;
-    animation: fadeUp 1s ease 0.3s forwards;
-  }
-
-  .hero-eyebrow {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.4em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeUp 1s ease 0.5s forwards;
-  }
-
-  .hero-title {
-    font-size: clamp(72px, 12vw, 140px);
-    font-weight: 300;
-    line-height: 0.9;
-    letter-spacing: -0.02em;
-    margin-bottom: 40px;
-    opacity: 0;
-    animation: fadeUp 1s ease 0.7s forwards;
-  }
-  .hero-title em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero-sub {
-    max-width: 520px;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(244,240,235,0.6);
-    margin-bottom: 56px;
-    opacity: 0;
-    animation: fadeUp 1s ease 0.9s forwards;
-  }
-
-  .hero-cta {
-    display: flex; gap: 24px; align-items: center;
-    opacity: 0;
-    animation: fadeUp 1s ease 1.1s forwards;
-  }
-
-  .btn-primary {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--black);
-    background: var(--accent);
-    padding: 18px 36px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
-  }
-  .btn-primary:hover { background: #CCFF00; transform: translateY(-2px); }
-
-  .btn-secondary {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    display: flex; align-items: center; gap: 12px;
-    transition: color 0.2s;
-  }
-  .btn-secondary:hover { color: var(--white); }
-  .btn-secondary::after {
-    content: '↓';
-    font-size: 14px;
-  }
-
-  .hero-stat {
-    position: absolute;
-    right: 48px;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: right;
-    opacity: 0;
-    animation: fadeIn 1s ease 1.3s forwards;
-  }
-  .hero-stat-num {
-    font-size: 96px;
-    font-weight: 300;
-    line-height: 1;
-    color: var(--accent);
-    opacity: 0.15;
-  }
-  .hero-stat-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 8px;
-    letter-spacing: 0.3em;
-    color: var(--muted);
-    text-transform: uppercase;
-    margin-top: 8px;
-  }
-
-  /* TICKER */
-  .ticker {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 0;
-    overflow: hidden;
-    background: var(--grey);
-  }
-  .ticker-inner {
-    display: flex;
-    white-space: nowrap;
-    animation: ticker 30s linear infinite;
-  }
-  .ticker-item {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 0 40px;
-  }
-  .ticker-item span { color: var(--accent); margin-right: 40px; }
-
-  /* SECTIONS */
-  section { padding: 120px 48px; }
-
-  .section-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.4em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 64px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .section-label::before {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--accent);
-  }
-
-  /* ABOUT */
-  .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .about-left h2 {
-    font-size: clamp(40px, 5vw, 64px);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 40px;
-  }
-  .about-left h2 em { font-style: italic; color: var(--accent); }
-  .about-left p {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(244,240,235,0.7);
-    margin-bottom: 20px;
-  }
-  .about-right { padding-top: 80px; }
-  .credential {
-    border-top: 1px solid var(--border);
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: border-color 0.2s;
-  }
-  .credential:hover { border-color: var(--accent); }
-  .credential-name {
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--white);
-  }
-  .credential-role {
-    font-family: 'Space Mono', monospace;
-    font-size: 8px;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    text-transform: uppercase;
-  }
-
-  /* SERVICES */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin-top: 0;
-  }
-  .service-card {
-    background: var(--grey);
-    padding: 48px 40px;
-    border-top: 1px solid var(--border);
-    transition: background 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
-  .service-card:hover { background: var(--mid); }
-  .service-card:hover::before { transform: scaleX(1); }
-  .service-num {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    margin-bottom: 32px;
-  }
-  .service-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
-  .service-title em { font-style: italic; color: var(--accent); }
-  .service-desc {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: rgba(244,240,235,0.55);
-  }
-
-  /* RESOURCES */
-  .resources-section { background: var(--grey); }
-  .resources-intro {
-    max-width: 640px;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(244,240,235,0.7);
-    margin-bottom: 64px;
-  }
-  .resources-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-  }
-  .resource-card {
-    background: var(--black);
-    padding: 36px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-left: 2px solid transparent;
-    transition: border-color 0.2s, background 0.2s;
-    text-decoration: none;
-  }
-  .resource-card:hover {
-    border-color: var(--accent);
-    background: var(--mid);
-  }
-  .resource-name {
-    font-size: 18px;
-    font-weight: 300;
-    color: var(--white);
-    margin-bottom: 6px;
-  }
-  .resource-detail {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    text-transform: uppercase;
-  }
-  .resource-arrow {
-    color: var(--accent);
-    font-size: 20px;
-    opacity: 0;
-    transition: opacity 0.2s, transform 0.2s;
-  }
-  .resource-card:hover .resource-arrow { opacity: 1; transform: translateX(4px); }
-
-  /* STATS BAR */
-  .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .stat-item {
-    padding: 64px 48px;
-    border-right: 1px solid var(--border);
-  }
-  .stat-item:last-child { border-right: none; }
-  .stat-number {
-    font-size: clamp(48px, 5vw, 72px);
-    font-weight: 300;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 16px;
-  }
-  .stat-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 8px;
-    letter-spacing: 0.25em;
-    color: var(--muted);
-    text-transform: uppercase;
-    line-height: 1.6;
-  }
-
-  /* CONTACT */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-  }
-  .contact-left h2 {
-    font-size: clamp(40px, 5vw, 64px);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 32px;
-  }
-  .contact-left h2 em { font-style: italic; color: var(--accent); }
-  .contact-left p {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.7;
-    color: rgba(244,240,235,0.6);
-    margin-bottom: 40px;
-  }
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
-    font-size: 15px;
-    color: rgba(244,240,235,0.6);
-  }
-  .contact-detail span {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    text-transform: uppercase;
-    width: 80px;
-  }
-
-  /* FORM */
-  .form { display: flex; flex-direction: column; gap: 2px; }
-  .form-group { position: relative; }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    background: var(--grey);
-    border: none;
-    border-bottom: 1px solid var(--border);
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    font-weight: 300;
-    padding: 20px 0;
-    outline: none;
-    transition: border-color 0.2s;
-    appearance: none;
-  }
-  .form-group textarea { min-height: 100px; resize: none; padding: 20px 0; }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus { border-color: var(--accent); }
-  .form-group input::placeholder,
-  .form-group textarea::placeholder { color: var(--muted); }
-  .form-group select option { background: var(--grey); color: var(--white); }
-
-  .form-submit {
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--black);
-    background: var(--accent);
-    border: none;
-    padding: 20px 40px;
-    margin-top: 16px;
-    cursor: none;
-    transition: background 0.2s, transform 0.2s;
-    align-self: flex-start;
-  }
-  .form-submit:hover { background: #CCFF00; transform: translateY(-2px); }
-
-  /* FOOTER */
-  footer {
-    padding: 48px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .footer-logo {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: var(--accent);
-    text-transform: uppercase;
-  }
-  .footer-copy {
-    font-family: 'Space Mono', monospace;
-    font-size: 8px;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    text-transform: uppercase;
-  }
-  .footer-social {
-    font-family: 'Space Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    color: var(--muted);
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-social:hover { color: var(--accent); }
-
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  @keyframes ticker {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  /* SCROLL REVEAL */
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 20px 24px; }
-    .nav-links { display: none; }
-    .hero { padding: 0 24px 60px; }
-    .hero-stat { display: none; }
-    section { padding: 80px 24px; }
-    .about, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-    .services-grid { grid-template-columns: 1fr; }
-    .resources-grid { grid-template-columns: 1fr; }
-    .stats-bar { grid-template-columns: repeat(2, 1fr); }
-    .stat-item { padding: 40px 24px; }
-    footer { flex-direction: column; gap: 20px; text-align: center; }
-  }
-</style>
-</head>
-<body>
-
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">The Standard</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-rule"></div>
-  <p class="hero-eyebrow">Setting the standard for safety in music</p>
-  <h1 class="hero-title">The<br><em>Standard</em></h1>
-  <p class="hero-sub">Specialist safeguarding, anti-sexual assault and women's safety training for the music and events industry. Because everyone deserves to work and perform in a safe space.</p>
-  <div class="hero-cta">
-    <a href="#contact" class="btn-primary">Book Training</a>
-    <a href="#resources" class="btn-secondary">Find Support</a>
-  </div>
-  <div class="hero-stat">
-    <div class="hero-stat-num">1 in 5</div>
-    <div class="hero-stat-label">festival attendees experience<br>harassment or assault</div>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span class="ticker-item"><span>◆</span> Zero Tolerance</span>
-    <span class="ticker-item"><span>◆</span> Trauma-Informed Training</span>
-    <span class="ticker-item"><span>◆</span> Industry Specialists</span>
-    <span class="ticker-item"><span>◆</span> Safeguarding</span>
-    <span class="ticker-item"><span>◆</span> Artist Safety</span>
-    <span class="ticker-item"><span>◆</span> Venue Training</span>
-    <span class="ticker-item"><span>◆</span> Set The Standard</span>
-    <span class="ticker-item"><span>◆</span> Zero Tolerance</span>
-    <span class="ticker-item"><span>◆</span> Trauma-Informed Training</span>
-    <span class="ticker-item"><span>◆</span> Industry Specialists</span>
-    <span class="ticker-item"><span>◆</span> Safeguarding</span>
-    <span class="ticker-item"><span>◆</span> Artist Safety</span>
-    <span class="ticker-item"><span>◆</span> Venue Training</span>
-    <span class="ticker-item"><span>◆</span> Set The Standard</span>
-  </div>
-</div>
-
-<!-- STATS BAR -->
-<div class="stats-bar reveal">
-  <div class="stat-item">
-    <div class="stat-number">1 in 5</div>
-    <div class="stat-label">Festivalgoers experience harassment or assault in the UK</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-number">2%</div>
-    <div class="stat-label">Of those affected ever report it to the police</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-number">43%</div>
-    <div class="stat-label">Of women under 40 have experienced assault at events</div>
-  </div>
-  <div class="stat-item">
-    <div class="stat-number">0</div>
-    <div class="stat-label">Tolerance for harassment, assault or abuse in our industry</div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-label">About</div>
-  <div class="about">
-    <div class="about-left reveal">
-      <h2>Built from inside<br>the <em>industry.</em></h2>
-      <p>The Standard was founded by Frances — a music industry consultant, artist manager and specialist trainer who has spent years working at the intersection of music, safety and advocacy.</p>
-      <p>This isn't generic corporate training. This is specialist knowledge, industry experience and personal commitment to making music a safer space for everyone in it.</p>
-    </div>
-    <div class="about-right reveal">
-      <div class="credential">
-        <span class="credential-name">Night Time Economy Solutions</span>
-        <span class="credential-role">Trained Specialist</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">AFEM Code of Conduct</span>
-        <span class="credential-role">Contributor</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">DJ Rebekah MeToo Campaign</span>
-        <span class="credential-role">Collaborator</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">Safer Dance</span>
-        <span class="credential-role">Training Consultant</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">Sony Music</span>
-        <span class="credential-role">Client</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">Teletech</span>
-        <span class="credential-role">Client</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">CIISA</span>
-        <span class="credential-role">Industry Authority</span>
-      </div>
-      <div class="credential">
-        <span class="credential-name">Help Musicians</span>
-        <span class="credential-role">Business Advisor</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" style="padding-top: 0;">
-  <div class="section-label reveal">Services</div>
-  <div class="services-grid">
-    <div class="service-card reveal">
-      <div class="service-num">01</div>
-      <h3 class="service-title">Safeguarding<br><em>Training</em></h3>
-      <p class="service-desc">Specialist safeguarding training tailored for music and events environments. Covers recognition, response, escalation and documentation. Delivered online or in person.</p>
-    </div>
-    <div class="service-card reveal">
-      <div class="service-num">02</div>
-      <h3 class="service-title">Anti-Sexual<br><em>Assault</em></h3>
-      <p class="service-desc">Comprehensive training covering consent, red flag behaviours, power dynamics, trauma-informed response and incident management. Built for real industry scenarios.</p>
-    </div>
-    <div class="service-card reveal">
-      <div class="service-num">03</div>
-      <h3 class="service-title">Women's<br><em>Safety</em></h3>
-      <p class="service-desc">Focused on the specific risks facing women in music and events — from dancefloor to backstage. Practical frameworks, cultural accountability and zero tolerance policy development.</p>
-    </div>
-    <div class="service-card reveal">
-      <div class="service-num">04</div>
-      <h3 class="service-title">Artist<br><em>Standards</em></h3>
-      <p class="service-desc">Bespoke safety standards documentation for artists, management and touring teams. Set expectations clearly and create a safer environment on tour, at festivals and in the studio.</p>
-    </div>
-    <div class="service-card reveal">
-      <div class="service-num">05</div>
-      <h3 class="service-title">Keynotes &<br><em>Conferences</em></h3>
-      <p class="service-desc">Speaking engagements, panels and workshops at industry conferences including ADE, IMS and The Great Escape. Bringing the conversation to where the industry gathers.</p>
-    </div>
-    <div class="service-card reveal">
-      <div class="service-num">06</div>
-      <h3 class="service-title">Consultancy<br><em>& Advisory</em></h3>
-      <p class="service-desc">Strategic safeguarding consultancy for labels, venues, festivals and booking agencies. Policy development, cultural audits and ongoing advisory support.</p>
-    </div>
-  </div>
-</section>
-
-<!-- RESOURCES -->
-<section id="resources" class="resources-section">
-  <div class="section-label reveal">Support & Resources</div>
-  <p class="resources-intro reveal">If you or someone you know needs support, these organisations are here to help. You are not alone and what happened to you is not your fault.</p>
-  <div class="resources-grid reveal">
-    <a href="https://rapecrisis.org.uk" target="_blank" class="resource-card">
-      <div>
-        <div class="resource-name">Rape Crisis England & Wales</div>
-        <div class="resource-detail">0808 500 2222 — Free, 24/7</div>
-      </div>
-      <div class="resource-arrow">→</div>
-    </a>
-    <a href="https://www.victimsupport.org.uk" target="_blank" class="resource-card">
-      <div>
-        <div class="resource-name">Victim Support</div>
-        <div class="resource-detail">08 08 16 89 111 — Free, 24/7</div>
-      </div>
-      <div class="resource-arrow">→</div>
-    </a>
-    <a href="https://galop.org.uk" target="_blank" class="resource-card">
-      <div>
-        <div class="resource-name">Galop</div>
-        <div class="resource-detail">0800 999 5428 — LGBT+ Specific</div>
-      </div>
-      <div class="resource-arrow">→</div>
-    </a>
-    <a href="https://mankind.org.uk" target="_blank" class="resource-card">
-      <div>
-        <div class="resource-name">ManKind Initiative</div>
-        <div class="resource-detail">01823 334244 — Male Survivors</div>
-      </div>
-      <div class="resource-arrow">→</div>
-    </a>
-    <a href="https://ciisa.org.uk" target="_blank" class="resource-card">
-      <div>
-        <div class="resource-name">CIISA</div>
-        <div class="resource-detail">Creative Industries Independent Standards Authority</div>
-      </div>
-      <div class="resource-arrow">→</div>
-    </a>
-    <a href="https://safegigs.com" target="_blank" class="resource-card">
-      <div>
-        <div class="resource-name">Safe Gigs for Women</div>
-        <div class="resource-detail">Industry Safety Resources</div>
-      </div>
-      <div class="resource-arrow">→</div>
-    </a>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-label reveal">Contact</div>
-  <div class="contact-grid">
-    <div class="contact-left reveal">
-      <h2>Let's set<br>the <em>standard</em><br>together.</h2>
-      <p>Whether you're looking to book training for your organisation, explore a consultancy relationship, or simply have a conversation about how to make your events safer — get in touch.</p>
-      <div class="contact-detail">
-        <span>Email</span>
-        francesbshillito@gmail.com
-      </div>
-      <div class="contact-detail">
-        <span>Instagram</span>
-        @thestandardmusic
-      </div>
-    </div>
-    <div class="contact-right reveal">
-      <form class="form" onsubmit="handleSubmit(event)">
-        <div class="form-group">
-          <input type="text" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <input type="email" placeholder="Your email" required>
-        </div>
-        <div class="form-group">
-          <input type="text" placeholder="Organisation">
-        </div>
-        <div class="form-group">
-          <select>
-            <option value="" disabled selected>What are you looking for?</option>
-            <option>Training session</option>
-            <option>Consultancy</option>
-            <option>Speaking / keynote</option>
-            <option>Artist safety standards</option>
-            <option>General enquiry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <textarea placeholder="Tell me more..."></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Enquiry →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">The Standard</div>
-  <div class="footer-copy">© 2025 The Standard. All rights reserved.</div>
-  <a href="#" class="footer-social">@thestandardmusic</a>
-</footer>
-
-<script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX; mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  // Nav scroll
-  window.addEventListener('scroll', () => {
-    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Form
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('.form-submit');
-    btn.textContent = 'Sent ✓';
-    btn.style.background = '#2A2A2A';
-    btn.style.color = '#BFFF00';
-  }
-</script>
-</body>
-</html>
+SEND ENQUIRY →
+THE STANDARD
+© 2025 THE STANDARD. ALL RIGHTS RESERVED.
+@THESTANDARDMUSIC
